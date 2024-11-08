@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://webapp.salesland.net:8095",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": "/WS_SALESLAND_LEADS/SALESLAND_LEADSCmb.svc"
+    }
+  }
+}

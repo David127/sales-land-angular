@@ -1,0 +1,193 @@
+<div class="container">
+  <h1 class="title">Formulario de Leads</h1>
+  
+  <form class="form" [formGroup]="form" (ngSubmit)="registerLead($event)">
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Campaña</mat-label>
+      <input matInput type="text" formControlName="campana">
+      <mat-hint>1 digito</mat-hint>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Código del proveedor</mat-label>
+      <input matInput type="text" formControlName="cod_proveedor">
+      <mat-hint>5 caracteres</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha caption</mat-label>
+      <input matInput [matDatepicker]="picker" (dateChange)="setFechaCaption($event)">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" formControlName="nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido1</mat-label>
+      <input matInput type="text" formControlName="ape1">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido2</mat-label>
+      <input matInput type="text" formControlName="ape2">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nif</mat-label>
+      <input matInput type="text" formControlName="nif">
+      <mat-hint>Entre números y letras mayúsculas</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Teléfono</mat-label>
+      <input matInput type="text" formControlName="telefono">
+      <mat-hint>9 digitos, puede empezar con 6, 7, 8 ó 9</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input matInput type="text" formControlName="direccion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Código Postal</mat-label>
+      <input matInput type="text" formControlName="codigo_postal">
+      <mat-hint>Ingrese código postal (Perú)</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Población</mat-label>
+      <input matInput type="text" formControlName="poblacion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Provincia</mat-label>
+      <input matInput type="text" formControlName="provincia">
+    </mat-form-field>
+
+    <p>Acepta 1</p>
+    <mat-radio-group aria-label="Select an option" formControlName="acepta1">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+
+    <p>Acepta 2</p>
+    <mat-radio-group aria-label="Select an option" formControlName="acepta2">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+
+    <p>Acepta 3</p>
+    <mat-radio-group aria-label="Select an option" formControlName="acepta3">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Num 1</mat-label>
+      <input matInput type="text" formControlName="num1">
+      <mat-hint>1 digito</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Num 2</mat-label>
+      <input matInput type="text" formControlName="num2">
+      <mat-hint>1 digito</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Num 3</mat-label>
+      <input matInput type="text" formControlName="num3">
+      <mat-hint>1 digito</mat-hint>
+    </mat-form-field>
+
+    <p>Dual 1</p>
+    <mat-radio-group aria-label="Select an option" formControlName="dual1">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+    
+    <p>Dual 2</p>
+    <mat-radio-group aria-label="Select an option" formControlName="dual2">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+    
+    <p>Dual 3</p>
+    <mat-radio-group aria-label="Select an option" formControlName="dual3">
+      <mat-radio-button value="SI">Sí</mat-radio-button>
+      <mat-radio-button value="NO">No</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Variable 1</mat-label>
+      <input matInput type="text" formControlName="variable1">
+      <mat-hint>Letras y números</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Variable 2</mat-label>
+      <input matInput type="text" formControlName="variable2">
+      <mat-hint>Letras y números</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Variable 3</mat-label>
+      <input matInput type="text" formControlName="variable3">
+      <mat-hint>Letras y números</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Memo</mat-label>
+      <input matInput type="text" formControlName="memo">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha</mat-label>
+      <input matInput [matDatepicker]="picker2" (dateChange)="setFecha($event)">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hora</mat-label>
+      <input matInput type="text" formControlName="hora">
+      <mat-hint>Formato 00:00</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Foto1</mat-label>
+      <input matInput type="text" formControlName="foto1">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Foto2</mat-label>
+      <input matInput type="text" formControlName="foto2">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Comercial</mat-label>
+      <input matInput type="text" formControlName="comercial">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Centro</mat-label>
+      <input matInput type="text" formControlName="centro">
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Registrar lead</button>
+  </form>
+
+</div>
